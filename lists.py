@@ -1,3 +1,12 @@
+# Create a list
 a = [5455, 5566]
-i=90
-print(a[i % len(a)])
+
+# Compare first and last numbers of list
+x= a[0] > a[1]
+
+# Print the result
+if x is True:
+    print(":-)")
+else:
+    print(":-(")
+
