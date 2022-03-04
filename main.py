@@ -1,21 +1,26 @@
-# This is all data types
+from classes import student
+from exercise import Course
+from random import randint
 
-5  # int
-5.5  # float
-'5.5'  # String
 
-print(len('hello'))  # Length of a string
+def add_random_grade(s: student):
+    s.add_grades(randint(60, 100))
 
-# Math Operators
-c = 5 + 5
-a = 5 / 5
-b = 5 * 5
-d = 5 - 5
 
-print(a, b, c, d)
+# with open('classlist.txt', 'a') as file:
+#   file.write(str(Ram))
 
-# Read a variable
+def main():
+    oop = Course('OOP II', 'P02-P01')
+    oop.add_students('Ram Kashyap', '0001')
+    oop.add_students('Deepak', '0002')
+    oop.add_students('Praneel', '0003')
 
-myvar = int(input("Enter a number"))
+    for student in oop.Students:
+        for i in range(5):
+            add_random_grade(student)
+    print(oop)
 
-print(myvar + 2)
+
+if __name__ == '__main__':
+    main()
